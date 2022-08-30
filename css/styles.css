@@ -4,6 +4,7 @@
     --color-headings: #1b0760;
     --color-primary: #2584ff;
     --color-secondary: #00d9ff;
+    --color-border: #ccc;
 }
 
 *,
@@ -180,7 +181,7 @@ a {
 
 .btn {
     font-size: 1.8rem;
-    font-weight: 600;
+    font-weight: 400;
     padding: 2rem 3rem;
     border: 0;
     border-radius: 40px;
@@ -253,7 +254,7 @@ a {
  /* Inputs */ 
  .input {
     padding: 1.5rem 3.5rem;
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-border);
     border-radius: 30px;
     outline: 0;
     color: var(--color-headings);
@@ -262,6 +263,22 @@ a {
 
  ::placeholder {
     color: #cdcbd7;
+ }
+
+ .input-group {
+    border: 1px solid var(--color-border);
+    border-radius: 30px;
+    display: flex;
+ }
+
+ .input-group .input{
+    border: 0;
+    flex-grow: 1;
+    padding: 1.5rem 1rem;
+ }
+
+ .input-group .btn {
+    margin: 4px;
  }
 
  @media screen and (min-width: 1024px) {
