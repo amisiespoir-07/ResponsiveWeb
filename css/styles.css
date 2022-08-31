@@ -5,6 +5,7 @@
     --color-primary: #2584ff;
     --color-secondary: #00d9ff;
     --color-border: #ccc;
+    --border-raduis: 30px;
 }
 
 *,
@@ -97,7 +98,7 @@ a {
 /*Badges */
 
 .badge {
-    border-radius: 20px;
+    border-radius: var(--border-raduis);
     font-size: 2rem;
     font-weight: 600;
     padding: 0.5rem 2rem;
@@ -255,7 +256,7 @@ a {
  .input {
     padding: 1.5rem 3.5rem;
     border: 1px solid var(--color-border);
-    border-radius: 30px;
+    border-radius: --border-raduis;
     outline: 0;
     color: var(--color-headings);
     font-size: 2rem;
@@ -267,7 +268,7 @@ a {
 
  .input-group {
     border: 1px solid var(--color-border);
-    border-radius: 30px;
+    border-radius: var(--border-raduis);
     display: flex;
  }
 
@@ -285,4 +286,27 @@ a {
     .input {
         font-size: 1.5rem;
     }
+ }
+
+ /* Card */
+
+ .card {
+    border-radius: 7px;
+    box-shadow: 0 0 20px 10px #f3f3f3;
+    overflow: hidden;
+ }
+
+ .card__header,
+ .card__body {
+    padding: 2rem 3rem;
+}
+
+.card--primary .card__header {
+    background: var(--color-primary);
+    color: #fff;
+ }
+
+.card--secondary .card__header {
+    background: var(--color-secondary);
+    color: #fff;
  }
